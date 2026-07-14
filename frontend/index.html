@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>悬疑探案游戏</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <button id="back-btn" class="btn-back" style="display: none;">← 返回</button>
+            <h1>🔍 悬疑探案游戏</h1>
+            <div class="header-buttons">
+                <button id="save-btn" class="btn-secondary">保存游戏</button>
+                <button id="load-btn" class="btn-secondary">加载存档</button>
+                <button id="new-game-btn" class="btn-primary">开始新游戏</button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="panel-section">
+                    <h3>嫌疑人名单</h3>
+                    <div id="suspect-list">
+                        <p class="empty-text">暂无嫌疑人信息</p>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3>已收集线索</h3>
+                    <div id="clue-list">
+                        <p class="empty-text">暂无线索</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center-panel">
+                <div class="dialog-box" id="dialog-box">
+                    <div id="dialog-content">
+                        <div class="welcome-screen">
+                            <h2>欢迎来到悬疑探案游戏</h2>
+                            <p>作为一名侦探，你需要收集线索、盘问嫌疑人，最终找出真凶。</p>
+                            <button id="start-game-btn" class="btn-primary">开始游戏</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="choices-area" id="choices-area">
+                </div>
+
+                <div class="custom-action">
+                    <input type="text" id="custom-input" placeholder="输入自定义行动...">
+                    <button id="custom-action-btn" class="btn-secondary">执行</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="suspect-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modal-title">嫌疑人详情</h3>
+            <div id="modal-body">
+            </div>
+        </div>
+    </div>
+
+    <div id="load-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>选择存档</h3>
+            <div id="load-body">
+                <p>加载中...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
